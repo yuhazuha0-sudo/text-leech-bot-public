@@ -196,7 +196,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 
-                elif ".pdf" in url:
+elif ".pdf" in url:
                     try:
                         cmd = f'yt-dlp -o "{name}.pdf" "{url}"'
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
@@ -224,7 +224,7 @@ else:
 
     count += 1
     time.sleep(1)
-            except Exception as e:
+except Exception as e:
                 await m.reply_text(
                     f"⌘ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐈𝐧𝐭𝐞𝐫𝐮𝐩𝐭𝐞𝐝\n{str(e)}\n⌘ 𝐍𝐚𝐦𝐞 » {name}\n⌘ 𝐋𝐢𝐧𝐤 » `{url}`"
                 )
