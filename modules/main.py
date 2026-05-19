@@ -416,16 +416,4 @@ if __name__ == "__main__":
         pass
 
     finally:
-        loop.stop()   loop = asyncio.get_event_loop()
-    try:
-        # Create tasks to run bot and web server concurrently
-        loop.create_task(start_bot())
-        loop.create_task(start_web())
-
-        # Keep the main thread running until all tasks are complete
-        loop.run_forever()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        # Cleanup
         loop.stop()
